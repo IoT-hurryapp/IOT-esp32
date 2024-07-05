@@ -67,6 +67,8 @@ void loop() {
   float h = dht.readHumidity();
   float t = dht.readTemperature();
   float f = dht.readTemperature(true);
+
+  
   
   if (isnan(h) || isnan(t) || isnan(f)) {
     Serial.println("Failed to read from DHT sensor!");
@@ -82,9 +84,9 @@ void loop() {
  
   StaticJsonDocument<200> jsonDoc;
   jsonDoc["id"] = "1";
-  jsonDoc["humidity"] = h;
-  jsonDoc["temperature_c"] = t;
-  jsonDoc["temperature_f"] = f;
+  jsonDoc["humidity"] = static_cast<int>(h);;
+  jsonDoc["temperature_c"] = static_cast<int>(t);
+  jsonDoc["temperature_f"] = static_cast<int>(f);
 
   jsonDoc["mq135_value"] = mq135Value;
   
