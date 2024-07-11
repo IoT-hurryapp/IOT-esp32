@@ -4,7 +4,7 @@
 #include "DHT.h"
 #include <Wire.h>
 #include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
+#include <Adafruit SH110X.h>
 
 const char* ssid = "Redmi Note 12";
 const char* password = "A000GGGG";
