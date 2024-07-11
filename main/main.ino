@@ -151,7 +151,7 @@ void loop() {
 
   // Display data on OLED
   display.clearDisplay();
-  display.setTextSize(1);               // Normal 1:1 pixel scale
+  display.setTextSize(2);               // Normal 1:1 pixel scale
   display.setTextColor(SH110X_WHITE);  // Draw white text
   display.setCursor(0, 0);              // Start at top-left corner
 
